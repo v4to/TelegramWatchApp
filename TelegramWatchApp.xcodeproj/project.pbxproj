@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49289B01265B865000865EAE /* QRCodeSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 49289B00265B865000865EAE /* QRCodeSwift */; };
+		49289B07265B904C00865EAE /* EFQRCode in Frameworks */ = {isa = PBXBuildFile; productRef = 49289B06265B904C00865EAE /* EFQRCode */; };
+		49710B6126628F4300745F6C /* MainInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49710B6026628F4300745F6C /* MainInterfaceController.swift */; };
 		49C3C77126557AB800B31EC1 /* TelegramWatchApp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 49C3C77026557AB800B31EC1 /* TelegramWatchApp WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		49C3C77726557AB800B31EC1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C3C77526557AB800B31EC1 /* Interface.storyboard */; };
 		49C3C77926557ABB00B31EC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C3C77826557ABB00B31EC1 /* Assets.xcassets */; };
@@ -19,19 +22,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		49289AFB265B857300865EAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 49C3C76626557AB700B31EC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 49C3C77E26557ABB00B31EC1;
+			remoteInfo = "TelegramWatchApp WatchKit Extension";
+		};
 		49C3C77226557AB800B31EC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49C3C76626557AB700B31EC1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 49C3C76F26557AB800B31EC1;
 			remoteInfo = "TelegramWatchApp WatchKit App";
-		};
-		49C3C78126557ABB00B31EC1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49C3C76626557AB700B31EC1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49C3C77E26557ABB00B31EC1;
-			remoteInfo = "TelegramWatchApp WatchKit Extension";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,13 +64,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		49710B6026628F4300745F6C /* MainInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInterfaceController.swift; sourceTree = "<group>"; };
 		49C3C76C26557AB700B31EC1 /* TelegramWatchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegramWatchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C3C77026557AB800B31EC1 /* TelegramWatchApp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TelegramWatchApp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49C3C77626557AB800B31EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		49C3C77826557ABB00B31EC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C3C77A26557ABB00B31EC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49C3C77F26557ABB00B31EC1 /* TelegramWatchApp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TelegramWatchApp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		49C3C78426557ABB00B31EC1 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		49C3C78426557ABB00B31EC1 /* InterfaceController.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 0; };
 		49C3C78626557ABB00B31EC1 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		49C3C78826557ABB00B31EC1 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		49C3C78A26557ABB00B31EC1 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -81,18 +85,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49289B01265B865000865EAE /* QRCodeSwift in Frameworks */,
+				49289B07265B904C00865EAE /* EFQRCode in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49289AFF265B865000865EAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		49C3C76526557AB700B31EC1 = {
 			isa = PBXGroup;
 			children = (
 				49C3C77426557AB800B31EC1 /* TelegramWatchApp WatchKit App */,
 				49C3C78326557ABB00B31EC1 /* TelegramWatchApp WatchKit Extension */,
 				49C3C76D26557AB700B31EC1 /* Products */,
+				49289AFF265B865000865EAE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -119,13 +133,14 @@
 		49C3C78326557ABB00B31EC1 /* TelegramWatchApp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				49C3C78426557ABB00B31EC1 /* InterfaceController.swift */,
 				49C3C78626557ABB00B31EC1 /* ExtensionDelegate.swift */,
+				49C3C78426557ABB00B31EC1 /* InterfaceController.swift */,
 				49C3C78826557ABB00B31EC1 /* NotificationController.swift */,
 				49C3C78A26557ABB00B31EC1 /* ComplicationController.swift */,
 				49C3C78C26557ABC00B31EC1 /* Assets.xcassets */,
 				49C3C78E26557ABC00B31EC1 /* Info.plist */,
 				49C3C78F26557ABC00B31EC1 /* PushNotificationPayload.apns */,
+				49710B6026628F4300745F6C /* MainInterfaceController.swift */,
 			);
 			path = "TelegramWatchApp WatchKit Extension";
 			sourceTree = "<group>";
@@ -146,6 +161,10 @@
 				49C3C77326557AB800B31EC1 /* PBXTargetDependency */,
 			);
 			name = TelegramWatchApp;
+			packageProductDependencies = (
+				49289AEC265B80CF00865EAE /* QRCodeSwift */,
+				49289B05265B8F9A00865EAE /* EFQRCode */,
+			);
 			productName = TelegramWatchApp;
 			productReference = 49C3C76C26557AB700B31EC1 /* TelegramWatchApp.app */;
 			productType = "com.apple.product-type.application.watchapp2-container";
@@ -160,7 +179,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				49C3C78226557ABB00B31EC1 /* PBXTargetDependency */,
+				49289AFC265B857300865EAE /* PBXTargetDependency */,
 			);
 			name = "TelegramWatchApp WatchKit App";
 			productName = "TelegramWatchApp WatchKit App";
@@ -180,6 +199,10 @@
 			dependencies = (
 			);
 			name = "TelegramWatchApp WatchKit Extension";
+			packageProductDependencies = (
+				49289B00265B865000865EAE /* QRCodeSwift */,
+				49289B06265B904C00865EAE /* EFQRCode */,
+			);
 			productName = "TelegramWatchApp WatchKit Extension";
 			productReference = 49C3C77F26557ABB00B31EC1 /* TelegramWatchApp WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -213,6 +236,10 @@
 				Base,
 			);
 			mainGroup = 49C3C76526557AB700B31EC1;
+			packageReferences = (
+				49289AEB265B80CF00865EAE /* XCRemoteSwiftPackageReference "swift_qrcodejs" */,
+				49289B04265B8F9A00865EAE /* XCRemoteSwiftPackageReference "EFQRCode" */,
+			);
 			productRefGroup = 49C3C76D26557AB700B31EC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -256,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49710B6126628F4300745F6C /* MainInterfaceController.swift in Sources */,
 				49C3C78926557ABB00B31EC1 /* NotificationController.swift in Sources */,
 				49C3C78B26557ABB00B31EC1 /* ComplicationController.swift in Sources */,
 				49C3C78726557ABB00B31EC1 /* ExtensionDelegate.swift in Sources */,
@@ -266,15 +294,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		49289AFC265B857300865EAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 49C3C77E26557ABB00B31EC1 /* TelegramWatchApp WatchKit Extension */;
+			targetProxy = 49289AFB265B857300865EAE /* PBXContainerItemProxy */;
+		};
 		49C3C77326557AB800B31EC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 49C3C76F26557AB800B31EC1 /* TelegramWatchApp WatchKit App */;
 			targetProxy = 49C3C77226557AB800B31EC1 /* PBXContainerItemProxy */;
-		};
-		49C3C78226557ABB00B31EC1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49C3C77E26557ABB00B31EC1 /* TelegramWatchApp WatchKit Extension */;
-			targetProxy = 49C3C78126557ABB00B31EC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -554,6 +582,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		49289AEB265B80CF00865EAE /* XCRemoteSwiftPackageReference "swift_qrcodejs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ApolloZhu/swift_qrcodejs.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.2;
+			};
+		};
+		49289B04265B8F9A00865EAE /* XCRemoteSwiftPackageReference "EFQRCode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/EFPrefix/EFQRCode.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		49289AEC265B80CF00865EAE /* QRCodeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49289AEB265B80CF00865EAE /* XCRemoteSwiftPackageReference "swift_qrcodejs" */;
+			productName = QRCodeSwift;
+		};
+		49289B00265B865000865EAE /* QRCodeSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49289AEB265B80CF00865EAE /* XCRemoteSwiftPackageReference "swift_qrcodejs" */;
+			productName = QRCodeSwift;
+		};
+		49289B05265B8F9A00865EAE /* EFQRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49289B04265B8F9A00865EAE /* XCRemoteSwiftPackageReference "EFQRCode" */;
+			productName = EFQRCode;
+		};
+		49289B06265B904C00865EAE /* EFQRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49289B04265B8F9A00865EAE /* XCRemoteSwiftPackageReference "EFQRCode" */;
+			productName = EFQRCode;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 49C3C76626557AB700B31EC1 /* Project object */;
 }

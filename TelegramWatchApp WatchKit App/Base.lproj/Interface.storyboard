@@ -1,16 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="18122" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch44"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="18022"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Telegram-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller title="Telegram" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TelegramWatchApp_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" textAlignment="center" numberOfLines="2" id="OKS-zb-Uv0"/>
+                        <group width="1" alignment="center" layout="vertical" spacing="3" id="zM4-br-bfm">
+                            <items>
+                                <label alignment="center" textAlignment="center" id="JBS-Re-hww">
+                                    <string key="text">Settings on your Phone
+</string>
+                                    <color key="textColor" red="0.68235301971435547" green="0.70588237047195435" blue="0.74901962280273438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                </label>
+                                <imageView alignment="center" id="VNL-8b-fxV">
+                                    <color key="tintColor" red="0.68235301969999995" green="0.70588237050000002" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label alignment="center" text="Devices" textAlignment="center" id="wPw-EL-agd">
+                                    <color key="textColor" red="0.68235301971435547" green="0.70588237047195435" blue="0.74901962280273438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                </label>
+                                <imageView alignment="center" id="lQ0-Qf-JoB">
+                                    <color key="tintColor" red="0.68235301969999995" green="0.70588237050000002" blue="0.74901962280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </imageView>
+                                <label alignment="center" text="Scan QR" textAlignment="center" id="LXw-Hc-E5p">
+                                    <color key="textColor" red="0.68235301971435547" green="0.70588237047195435" blue="0.74901962280273438" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="overlap" id="yeE-3g-PD7">
+                            <items>
+                                <imageView alignment="center" id="VAv-s7-r8A"/>
+                                <imageView width="40" height="40" alignment="center" verticalAlignment="center" image="TelegramIcon" id="rdW-Ck-3Kr"/>
+                            </items>
+                        </group>
+                        <group alignment="left" radius="10" id="GUg-fR-Eba"/>
+                    </items>
+                    <edgeInsets key="margins" left="5" right="5" top="0.0" bottom="0.0"/>
+                    <connections>
+                        <outlet property="chevronIconBottom" destination="lQ0-Qf-JoB" id="uvS-xI-krG"/>
+                        <outlet property="chevronIconTop" destination="VNL-8b-fxV" id="dIp-RK-pfp"/>
+                        <outlet property="group" destination="yeE-3g-PD7" id="gOj-Sl-Gws"/>
+                        <outlet property="headline" destination="OKS-zb-Uv0" id="ioB-eV-GOI"/>
+                        <outlet property="qrCodeImage" destination="VAv-s7-r8A" id="4pi-4D-X3c"/>
+                        <outlet property="qrCodeImg" destination="GUg-fR-Eba" id="dRe-iW-gxG"/>
+                        <outlet property="telegramIconImg" destination="rdW-Ck-3Kr" id="EEE-l3-KV5"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="219.52173913043478" y="391.22767857142856"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,16 +78,20 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="TelegramWatchApp_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="643"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="TelegramWatchApp_WatchKit_App" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="468" y="345"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <resources>
+        <image name="TelegramIcon" width="41" height="41"/>
+    </resources>
 </document>
